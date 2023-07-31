@@ -1,0 +1,91 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: whitesmoke;
+}
+
+h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgb(25, 0, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    font-family: Verdana, Geneva, sans-serif; 
+ }
+ 
+ p {
+     font-family: Verdana, Geneva, sans-serif;
+     line-height: 1.4;
+ }
+ 
+ div {
+     padding-bottom: 10px;
+ }
+ 
+ a:link { text-decoration: none; }
+
+
+ a:visited { text-decoration: none; }
+
+ h2.title {
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+div.header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  div.movieInfo1 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    background-color: azure;
+    border: 2px solid blue;
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+
+h1.Home:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 174, 255);
+}
+
+
+nav ul {
+    border: 2px solid blue;
+    border-radius: 8px;
+    list-style-type: none;
+    overflow: hidden;
+    width: 96%;
+}
+
+nav li {
+    float: left;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav li a {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+nav li a:hover {
+    color: white;
+    background-color: blue;
+}
+
+li.Home {
+    font-size: medium;
+}

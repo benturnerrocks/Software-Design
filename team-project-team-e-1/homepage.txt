@@ -1,0 +1,27 @@
+Please type in /getMovie/<some_title> to search the data for that title-- If the movie title has multiple words,please separate them using underscores. For example, to search the movie Bird Box, you would type the url followed by /getMovie/Bird_Box.------------------------------ 
+Alternatively, if you want a list of movies that fit a certain criterion, type in /findMatchingMovies followed by pairs of categories and examples, as shown below:
+
+/findMatchingMovies/-g/Documentaries returns all the movies that are listed as Documentary genre. ---------------------------
+
+/findMatchingMovies/-d/Spielberg returns all movies that have Steven Spielberg listed as director. ---------------------------
+
+Using /getRandomMovie with the same url style as above returns a random set of movie info from the matched set. ----------------------------
+
+Possible arguments for /getRandomMovie and /findMatchingMovies:
+-ti or -title for title;
+-ty or -type for type(Movie or TV show);
+-di or -director for director;
+-ca or -a or -cast for cast;
+-co or -country for country;
+-da or -date_added for date added;
+-y or -year for release year;
+-r or -rating for rating;
+-du or -duration for film/show duration;
+-g or -genre for genre;
+-de or -description for description.
+
+The second argument represents a value in the specified category.
+---------------------------------------
+Finally, to list the 10 most frequently searched movies, enter /getPopularMovies in the url with no additional arguments. ---------------------------
+
+

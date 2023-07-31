@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>FAQs</title>
+        <link rel="stylesheet" href="../static/404.css">
+    </head>
+
+    <body>
+        <div class="header" id="header">
+            <a href="{{ url_for('homepage') }}" id="homeLink" class="homeLink">
+                <h1 class="Home" id="Home"> Streaming Comparator </h1>
+            </a>
+            <h2 id="title" class="title">
+                404 Page Not Found
+            </h2>
+        </div>
+        <div class="main" id="main">
+            <p>
+
+                Click the header at the top to go back to the homepage or follow the FAQ link at the bottom to get more info.
+                <br><br>
+                Our main page provides multiple ways to navigate the movie database to find either a certain movie, a movie given criteria, a random movie given criteria, or our popular movies.
+
+            </p>
+        </div>
+        <div><em><nav>
+            <ul>
+            <li id="Home"><a href={{ url_for('homepage') }}>Streaming Comparator</a></li>
+            <li><a href={{ url_for('FAQpage') }}>FAQs</a></li>
+            <li><a href={{ url_for('aboutUs') }}>About Us</a></li>
+            </ul>
+        </nav></em></div>
+    </body>
+    </html>

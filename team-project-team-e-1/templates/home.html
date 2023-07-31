@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Streaming Database</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js">  
+        </script>  
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js">  
+        </script>  
+        
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css"
+            rel="stylesheet" type="text/css" />  
+        <link rel="stylesheet" href="../static/homepage.css">
+    </head>
+    <body>
+        <div class="header" id="header">
+            <a href="{{ url_for('homepage') }}" id="homeLink" class="homeLink">
+                <h1 class="Home" id="Home"> Streaming Comparator </h1>
+            </a>
+        </div>
+        <div class="main" id="main">
+            <div class = "first" id = "formFirst">
+                <h2>Film Search</h2>
+                <p>Select one of the options below to filter entertainment</p>
+                <form id="form" action="search">
+                    <div class="label">
+                        <label for="title">Title</label>
+                        <input type="search" id="tags" name="titleChoice"
+                        placeholder="Search..."
+                        aria-label="Enter a title of a movie or tv show">
+                        <script>
+                            $( function() {
+                              var availableTags = [
+                                  {% for movie in movieList %}
+                                      "{{movie}}",
+                                  {% endfor %}
+                              ];
+                              $( "#tags" ).autocomplete({
+                                source: availableTags
+                              });
+                            } );
+                            </script>
+                    </div>
+                    <div class="label">
+                        <label for="genre">Genre</label>
+                        <select name="genreChoice">
+                            <option value=""> </option>  
+                            {% for genre in genreList: %}
+                                <option value ="{{genre}}">{{genre}}</option>
+                            {% endfor %} 
+                        </select>
+                    </div>
+                    <div class="label">
+                        <label for="director">Director</label>
+                        <input type="search" id="director" name="directorChoice"
+                        placeholder="Search..."
+                        aria-label="Enter a director to filter">
+                    </div>
+                    <div class="label">
+                        <label for ="entertainmentType">Entertainment type</label>
+                        <select name="entertainmentType">
+                            <option value=""> </option>
+                            <option value="Movie">Movie</option>
+                            <option value="TV Show">TV Show</option>   
+                        </select>
+                    </div>
+                    <div class="label">
+                        <label for ="cast">Cast member</label>
+                            <input type="search" id="cast" name="castChoice"
+                            placeholder="Search..."
+                            aria-label="Enter a cast member">
+                    </div>
+                    <div class="label">
+                        <label for ="country">Filming Location(country)</label>
+                        <select name="countryChoice">
+                            <option value=""> </option>  
+                            {% for country in countryList: %}
+                                <option value ="{{country}}">{{country}}</option>
+                            {% endfor %} 
+                        </select>
+                    </div>
+                    <div class="label">
+                        <label for ="year">Release Year</label>
+                        <select name="yearChoice">
+                            <option value=""> </option>  
+                            {% for year in yearList: %}
+                                <option value ="{{year}}">{{year}}</option>
+                            {% endfor %} 
+                        </select>
+                    </div>
+                    
+                    <div class="label">
+                        <label for ="rating">Rating</label>
+                        <select name="rating">
+                            <option value=""> </option>
+                            {% for rating in ratingList: %}
+                                <option value ="{{rating}}">{{rating}}</option>
+                            {% endfor %} 
+                        </select>
+                    </div>
+                    <div class="label">
+                        <label for ="streaming">Streaming Service</label>
+                        <select name="Streaming">
+                            <option value=""> </option>
+                            <option value="Netflix">Netflix</option>
+                            <option value="Hulu">Hulu</option>   
+                            <option value="Disney">Disney+</option> 
+                            <option value="Amazon">Amazon Prime</option>
+                            
+                        </select>
+                    </div>
+                    <div class="label">
+                        <label for="randomCheck">Random pick</label>
+                        <input type="radio" id="randomCheck" name="randomnessChoice" value="Random">
+                        <label for="standardCheck">All matching entertainment</label>
+                        <input type="radio" id="standardCheck" name="randomnessChoice" value="Standard" checked= "checked">
+                    </div>
+
+
+                    <input type="submit" value="Submit">
+                </form>
+
+            </div>
+            <div class="first" id="popular">
+                <div id="tops"><em><nav>
+                    <h2>Top 3 Movies</h2>
+                    <ul class = "popularList">
+                        {% for movie in topFilms: %}
+                            <li>  <a class = "topHits" href = "{{ url_for('moviePage', title = movie) }}">{{movie}}</a></li>
+                                {% endfor %} 
+                    </ul>
+                </nav></em></div>
+                <a id = "popularLink" href = {{ url_for('get_popular_movies') }}>See All Popular Movies!</a>
+            </div>
+        </div>
+        <div><em><nav>
+            <ul>
+            <li id="Home"><a href={{ url_for('homepage') }}>Streaming Comparator</a></li>
+            <li><a href={{ url_for('FAQpage') }}>FAQs</a></li>
+            <li><a href={{ url_for('aboutUs') }}>About Us</a></li>
+            </ul>
+        </nav></em></div>
+    </body>
+</html>

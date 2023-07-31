@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Movie Info</title>
+        <link rel="stylesheet" href="../static/movieInfo.css">
+    </head>
+    <body>
+            <div class="header" id="header">
+                <a href="{{ url_for('homepage') }}" id="homeLink" class="homeLink">
+                    <h1 class="Home" id="Home"> Streaming Comparator </h1>
+                </a>
+                <h2 id="title" class="title">
+                    {{title}}
+                </h2>
+            </div>
+            <div class="main" id="main">
+
+            <div class="info" id="movieInfo1">
+                <ul>
+                    <li><strong>Type:</strong> {{type}}</li>
+                    <li><strong>Duration:</strong> {{runtime}}</li>
+                    <li><strong>Content Rating:</strong> {{rating}}</li>
+                    <li><strong>Genre:</strong> {{genres}}</li>
+                </ul>
+            </div>
+            <div class="info" id="movieInfo2">
+                <ul>
+                    <li><strong>Director:</strong> {{director}}</li>
+                    <li><strong>Country:</strong> {{locations}}</li>
+                    <li><strong>Release Year:</strong> {{releaseYear}}</li>
+                    <li><strong>Cast:</strong> {{cast}}</li>
+                </ul>
+                    
+            </div>
+            <div class="info" id="movieInfo3">
+                <ul>
+                    <li><strong>Streaming Service:</strong> {{streamingService}}</li>
+                </ul>
+                {% if streamingService=="Netflix" %}
+                    <a href={{links[0]}} id="homeLink" class="homeLink" target="blank">
+                        <img src={{logos[0]}} class="logo" id="logo" alt="Netlix logo"> 
+                    </a>  
+                {% elif streamingService=="Hulu"%}
+                    <a href={{links[1]}} id="homeLink" class="homeLink" target="blank">
+                        <img src={{logos[1]}} class="logo" id="logo" alt="Hulu logo"> 
+                    </a>  
+                {% elif streamingService=="Disney Plus"%}
+                    <a href={{links[2]}} id="homeLink" class="homeLink" target="blank">
+                        <img src={{logos[2]}} class="logo" id="logo" alt="Disney Plus logo"> 
+                    </a>  
+                {% elif streamingService=="Amazon Prime"%}
+                    <a href={{links[3]}} id="homeLink" class="homeLink" target="blank">
+                        <img src={{logos[3]}} class="logo" id="logo" alt="Amazon Prime logo"> 
+                    </a>  
+                {% else %}
+                <p> Error finding streaming service. </p>
+                {%endif%}
+                  
+            </div>
+
+        </div>
+
+        <div class = "description" id="description">
+            <h3>Synopsis:</h3>
+            <p>{{description}}</p>
+        </div>
+        
+        <div><em><nav>
+            <ul>
+            <li id="Home"><a href="{{ url_for('homepage') }}">Streaming Comparator</a></li>
+            <li><a href="{{ url_for('FAQpage') }}">FAQs</a></li>
+            <li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+            </ul>
+        </nav></em></div>
+    
+    </body>
+</html>

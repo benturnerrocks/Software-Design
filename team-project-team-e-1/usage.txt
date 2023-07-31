@@ -1,0 +1,19 @@
+getMovie(title) {
+    From a title, return all relevant information regarding a movie.
+}
+
+findMatchingMovie(actors, release year, genre) {
+    return a list of movies which matches criteria arguments given. Currently returns
+    movies with match at least one criteria argument, but will later allow users to find movies
+    which must match several criteria. 
+}
+
+getRandomMovie(actors, release year, genre) {
+     a function that provides a random movie given a specified genre, actor, or release year
+}
+    
+
+getPopularMovies() {
+    return a list of movies that are currently the most popular.
+    popularity is determined by how many times a movie's description has been viewed.
+}

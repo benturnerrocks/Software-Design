@@ -1,0 +1,83 @@
+---------------------
+|       USAGE       |
+---------------------
+
+To use a command line function, type: 
+
+    main.py <functionName> <Filter1> <Filter2> ... <FilterN>
+
+to see the usage for a given function, type:
+
+    main.py help <functionName>
+
+The available functions are:
+
+    getMovie
+    getRandomMovie
+    findMatchingMovies
+    getPopularMovie
+
+Filter1--N: used to filter the results for the different functions. To see all the filters taken by 
+functions, type:
+
+    main.py help filters
+__________________________
+getMovie usage: 
+
+    main.py getMovie -ti <movie title>
+
+-- returns all information for <movie title>, where <movie title> is the complete title for a movie, tpyed in quotes
+__________________________
+getRandomMovie() usage: 
+
+main.py getRandomMovie <category1> <descriptor1> ... <categoryN> <descriptorN>  
+
+-- The function returns a random movie matching the filters following the command.
+
+Example:
+
+    main.py getRandomMovie -di Spielberg
+
+returns random movie directed by Spielberg
+___________________________
+findMatchingMovies() usage:
+
+    main.py getRandomMovie <category1> <descriptor1> ... <categoryN> <descriptorN> 
+
+-- returns the names of all movies matching at least one of the filters following the command
+
+Example: main.py findMatchingMovies -di "Spielberg"
+
+    main.py findMatchingMovies -di Spielberg Tarantino
+
+returns all movies directed by Spielberg or Tarantino
+___________________________
+getPopularMovie() usage: 
+
+    main.py getPopularMovie
+
+-- getPopularMovie returns a list of the ten most popular movies, 
+based on how frequently they've been searched on getMovie.
+____________________________
+The filters for a function are passed in pairs with the first 
+filter being one of the following search categories: 
+
+-ti or -title for title
+-ty or -type for type(Movie or TV show)
+-di or -director for director
+-ca or -a or -cast for cast
+-co or -country for country
+-da or -date_added for date added
+-y or -year for release year
+-r or -rating for rating
+-du or -duration for film/show duration
+-g or -genre for genre
+-de or -description for description
+-ser or -service for streaming service
+
+and the second argument being a search keyword for that category.
+
+Example:
+-ty Movie
+-g Comedies
+____________________________

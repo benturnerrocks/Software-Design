@@ -1,0 +1,173 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgb(137, 213, 251);  
+    background-image: linear-gradient(rgb(216, 242, 255), rgb(152, 162, 246));  
+}
+
+h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgb(25, 0, 255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px solid rgb(175, 175, 255);
+    border-radius: 8px;
+}
+
+h1, h2 {
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.4;
+}
+
+div {
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+ul {
+    width: 65%;
+}
+
+li {
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.4;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+div.header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+h2.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.first {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    background-color: azure;
+    border: 2px solid blue;
+    border-radius: 8px;
+    margin: 10px;
+  }
+
+
+h1.Home:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 174, 255);
+    border: 2px solid rgb(143, 143, 248);
+    border-radius: 8px;
+}
+
+#formFirst {
+    width: 30%;
+}
+
+div.label {
+    width: 100%;
+}
+
+#popularLink{
+    text-align: center;
+    float: right;
+    display: inline;
+    padding: 20px;
+    font-size: 25px;
+    width: 50%;
+    border: 2px solid blue;
+    border-radius: 8px;
+    border-width: thick;
+    background-color: gainsboro;
+    color: rgb(0, 0, 0);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    div.first { 
+      width: 75% ;
+    }
+    #formFirst {
+        width: 75%;
+    }
+    #popularLink{
+        margin-left: 20%;
+    }
+}
+
+#popularLink:hover{
+    width: 50%;
+    padding: 20px;
+    margin-top: 5px;
+    font-size: 25px;
+    color: gainsboro;
+    background-color:  blue;
+
+}
+
+nav li.topHits {
+    width: 30%;
+    float: left;
+    display: inline;
+    text-align: left;
+    padding: 20px;
+    margin-top: 5px;
+    font-size: 25px;
+    color: white;
+    margin: 10%;
+    background-color: rgb(0, 0, 128);
+    border: 2px solid blue;
+}
+nav ul.popularList {
+    border: none;
+}
+nav ul {
+    border: 2px solid blue;
+    border-radius: 8px;
+    list-style-type: none;
+    overflow: hidden;
+    width: 96%;
+}
+
+nav li {
+    float: left;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+nav li a {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+nav li a:hover {
+    color: white;
+    background-color: blue;
+}
+
+li.Home {
+    font-size: medium;
+}
+
+input[type=submit] {
+    float: left;
+    margin:8px 0;
+    width: 25%;
+}

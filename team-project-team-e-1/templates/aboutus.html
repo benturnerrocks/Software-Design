@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>FAQs</title>
+        <link rel="stylesheet" href="../static/aboutus.css">
+    </head>
+
+    <body>
+        <div class="header" id="header">
+            <a href="{{ url_for('homepage') }}" id="homeLink" class="homeLink">
+                <h1 class="Home" id="Home"> Streaming Comparator </h1>
+            </a>
+            <h2 id="title" class="title">
+                About Us
+            </h2>
+        </div>
+        <div class = "description">
+            <p>We're a group of college students who realized that with the massive variety of current streaming platforms, 
+                it was difficult to quickly find entertainment options without feeling overwhelmed. The goal of this tool is to make movie
+                searching easier by letting you filter entertainment from different streaming services, or select random options if you're not sure what to pick. 
+            </p>
+        </div>
+        <div><em><nav>
+            <ul>
+            <li id="Home"><a href={{ url_for('homepage') }}>Streaming Comparator</a></li>
+            <li><a href={{ url_for('FAQpage') }}>FAQs</a></li>
+            <li><a href={{ url_for('aboutUs') }}>About Us</a></li>
+            </ul>
+        </nav></em></div>
+    </body>
+    </html>

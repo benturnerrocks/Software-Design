@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>FAQs</title>
+        <link rel="stylesheet" href="../static/faq.css">
+    </head>
+
+    <body>
+        <div class="header" id="header">
+            <a href="{{ url_for('homepage') }}" id="homeLink" class="homeLink">
+                <h1 class="Home" id="Home"> Streaming Comparator </h1>
+            </a>
+            <h2 id="title" class="title">
+                Frequently Asked Questions
+            </h2>
+        </div>
+        
+        <div class="main" id="main">
+        <!--The structure for these buttons was taken from W3 Schools https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+        <button class="collapsible">What is this website?</button>
+        <div class="content">
+            <p>The Streaming Filter! We allow you to search for titles currently on Netflix, Hulu, Amazon Prime, and Disney Plus.</p>
+        </div>
+
+        <button class="collapsible">How do I search for a movie or show?</button>
+        <div class="content">
+            <p>There is a search functionality on our home page where you can look for titles that match the criteria you give. Just fill out what your looking for and hit 'submit'!</p>
+        </div>
+
+        <button class="collapsible">This Website is Awesome! How can I support the hardworking, good-looking, thoughtful, and caring developers?</button>
+        <div class="content">
+            <p>Venmo:</p>
+        </div>
+
+        <button class="collapsible">How do you measure the popularity of a title?</button>
+        <div class="content">
+            <p>We determine the popularity of a movie or show by number times its info page has been viewed. We do not consider any external measurements for simplicity's sake.</p>
+        </div>
+
+        <button class="collapsible">This website says that the show or movie I want to watch is on a certain streaming platform, but I cannot find it on said platform.</button>
+        <div class="content">
+            <p>The most likely culprit in this case is our database. It may be that our information of titles on a streaming platform is outdated and needs to be replaced with a newer version. Sorry for the inconvenience!</p>
+        </div>
+
+        <script src="../static/faq.js"></script>
+        </div>
+        <div><em><nav>
+            <ul>
+            <li id="Home"><a href={{ url_for('homepage') }}>Streaming Comparator</a></li>
+            <li><a href={{ url_for('FAQpage') }}>FAQs</a></li>
+            <li><a href={{ url_for('aboutUs') }}>About Us</a></li>
+            </ul>
+        </nav></em></div>
+    </body>
+</html>

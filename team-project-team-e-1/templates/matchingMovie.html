@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Search For: {{keyword}}</title>
+        <link rel="stylesheet" href="../static/matchingMovie.css">
+    </head>
+    <body>
+            <div class="header" id="header">
+                <a href="{{ url_for('homepage') }}" id="homeLink" class="homeLink">
+                    <h1 class="Home" id="Home"> Streaming Comparator </h1>
+                </a>
+                <h2 id="title" class="title">
+                    Your search for {{keyword}} returned:
+                </h2>
+            </div>
+            <div class="main" id="main">
+                {{message}}
+                <ul>
+                    {% for movie in movies: %}
+                    <a href="{{ url_for('moviePage', title = movie) }}"+{{movie}}><li>{{  movie  }}</li></a>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        
+        <div><em><nav>
+            <ul>
+            <li id="Home"><a href="{{ url_for('homepage') }}">Streaming Comparator</a></li>
+            <li><a href="{{ url_for('FAQpage') }}">FAQs</a></li>
+            <li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+            </ul>
+        </nav></em></div>
+    
+    </body>
+</html>
+
