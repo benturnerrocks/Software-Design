@@ -1,0 +1,35 @@
+<html> <!-- all pages start and end with this tag -->
+<!-- Header information: links to external scripts and style files, other metadata about the page. -->
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='datastyle.css') }}">
+<!-- The title is mandatory. If you use tabs, the title appears in the page's tab in your browser.-->
+<title>Books</title>
+</head>
+<!-- The body consists of the visible parts of the web page. -->
+<body>
+    <h1>Welcome to {{title}}!</h1>
+        <div id="intro">
+            <h2>Welcome</h2>
+            <p>Hello! This website is brought to you by Ben Turner. 
+                Here you can find my favorite books, rated and reviewed by me. 
+                Below you can search for one of these books and get more information to better choose your next book.</p>
+        </div>
+        <div id="booksearch">
+            <p>Which book would you like to read?</p>
+
+            <form action="bookbytitle">
+                <label for="books">Choose a book</label>
+                <select name="bookchoice">
+                        
+                    {% for book in books: %}
+                    <option value="{{book}}">{{book}}</option>
+                    {% endfor %}
+                        
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+<!-- always end your page with these tags! -->
+</body>
+</html>

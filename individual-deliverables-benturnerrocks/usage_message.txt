@@ -1,0 +1,70 @@
+---------------------
+|       USAGE       |
+---------------------
+
+To reach usage statement, enter one of the following:
+usage
+-usage
+help
+-help
+__________________________
+getMovie usage: 
+
+main.py getMovie -ti title
+
+-- title should be entered in quotes, e.g.
+
+Example: main.py getMovie -ti "Bird Box"
+
+Returns: a list of all the relevant film information stored by the dataset.
+__________________________
+getRandomMovie() usage: 
+
+main.py getRandomMovie category1 descriptor1 category2 descriptor2 ... category12 descriptor12
+
+-- Possible categories and descriptions listed below; category goes with a descriptor as shown with example
+Returns: a random movie out of the ones filtered by the command line requirements.
+
+Example: main.py getRandomMovie -di "Spielberg"
+
+Returns: random movie directed by Spielberg
+
+___________________________
+findMatchingMovies() usage:
+
+main.py getRandomMovie category1 descriptor1 category2 descriptor2 ... category12 descriptor12
+
+-- Requires an argument as a filter to return movies that match that criteria.
+
+Example: main.py findMatchingMovies -di "Spielberg"
+
+Returns: List of titles that match given criteria
+___________________________
+getPopularMovie usage: 
+
+main.py getPopularMovie
+
+-- No command line arguments
+
+Returns: a list of the ten most popular movies, based on how frequently they've been searched on getMovie
+____________________________
+Arguments for getMovie (only title), getRandomMovie, and findMatchingMovies are structured in pairs, with the first one representing a category of the dataset: 
+
+-ti or -title for title
+-ty or -type for type(Movie or TV show)
+-di or -director for director
+-ca or -a or -cast for cast
+-co or -country for country
+-da or -date_added for date added
+-y or -year for release year
+-r or -rating for rating
+-du or -duration for film/show duration
+-g or -genre for genre
+-de or -description for description
+-ser or -service for streaming service
+
+The second argument represents a value in the specified category.
+
+Example:
+-ty "Movie"
+-g "Comedies" 

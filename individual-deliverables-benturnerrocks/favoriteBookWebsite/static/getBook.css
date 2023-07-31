@@ -1,0 +1,97 @@
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: whitesmoke;
+}
+
+h1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgb(0, 9, 128);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+h1, h2 {
+   font-family: Verdana, Geneva, sans-serif; 
+}
+
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.4;
+}
+
+figure {
+    margin-right: auto;
+}
+
+figcaption {
+    font-size: large;
+}
+
+img {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 30%;
+}
+
+div {
+    clear: left;
+    padding-bottom: 10px;
+}
+
+ul {
+    width: 65%;
+}
+
+li {
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.4;
+}
+
+div.book {
+    float: left;
+    padding: 10px;
+  }
+
+div.bookInfo {
+    background-color: azure;
+    width: 550px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    font-size: large;
+    position: relative;
+    left: 100px;
+}
+
+img.authorImg {
+    width: 40%;
+}
+
+div.bookImage {
+    text-align: right;
+    font-size: large;
+}
+
+figure.bookFig {
+    padding: 10px;
+    margin: 10px;
+    text-align: right;
+    position: absolute;
+    top: 115px;
+}
+
+h1:hover {
+    color: white;
+    background-color: rgb(133, 133, 196);
+
+}
+div.body:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

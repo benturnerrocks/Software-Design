@@ -1,0 +1,38 @@
+<html> <!-- all pages start and end with this tag -->
+<!-- Header information: links to external scripts and style files, other metadata about the page. -->
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='getBook.css') }}">
+<!-- The title is mandatory. If you use tabs, the title appears in the page's tab in your browser.-->
+    <title>Find a Book</title>
+    
+</head>
+<!-- The body consists of the visible parts of the web page. -->
+<body>
+<div class="body" id="body">
+    <a href="http://127.0.0.1:5000/">
+        <h1>{{title}} Book Info</h1>
+    </a>
+    <div id="bookinfo" class="bookinfo">
+        <h2>{{info[0]}}</h2>
+        <ul>
+            <li>Author: {{info[1]}}</li>
+                <img src={{info[6]}} alt="An image of the author" class="authorImg" id="authorImg">
+            <li>Page Count: {{info[5]}}</li>
+            <li>Rating: {{info[2]}}</li>
+            <li>Review: {{info[7]}}</li>
+        </ul>
+    </div>
+    <div class="bookImage" id="bookImage">
+        <figure class="bookFig" id="bookFig">
+            <a href={{info[4]}} target=”_blank”>
+                <img src={{info[3]}} alt="The book cover for "+{{info[0]}} class="bookImg" id="bookImg">
+            </a>
+            <figcaption>The book cover for {{info[0]}}</figcaption>
+        </figure>
+        
+    </div>
+</div>
+
+<!-- always end your page with these tags! -->
+</body>
+</html>
