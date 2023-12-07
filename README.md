@@ -1,5 +1,5 @@
 # Software Design
-This repository contains project work for our Flask project on streaming services in CS257 (Software Design) at Carleton College. We focused on using Agile development methodologies and Git version control through GitHub.
+A full stack Flask project on movie/TV shows across streaming services in CS257 (Software Design) at Carleton College. We focused on using Agile development methodologies and Git version control through GitHub.
 
 The **individual-deliverables-benturnerrocks** folder contains the CLI delivered by just me without PSQL. It includes some code by teammates but my key contributions include the random function, the search functionalities, the parser, and the testing. I created and prioritized the switch to OOP using a Movie class. This includes:
   - a preliminary flask app *FlaskLab* using dummy data
